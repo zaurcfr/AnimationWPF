@@ -1,0 +1,120 @@
+﻿<Window x:Class="AnimationWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimationWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Height="50" Width="50" Name="btn1" Background="DarkGreen"></Button>
+            <Button Grid.Column="1" Height="50" Width="50" Name="btn2" Background="DarkGreen"></Button>
+        
+        </Grid>
+
+        <Button Grid.Row="1" Width="100" Background="Black">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn1"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding ElementName=btn1,Path=ActualHeight}"
+                                    To="180"
+                                    Duration="0:0:1"></DoubleAnimation>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn1"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding ElementName=btn1,Path=ActualWidth}"
+                                    To="180"
+                                    Duration="0:0:1"></DoubleAnimation>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn2"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding ElementName=btn2,Path=ActualHeight}"
+                                    To="180"
+                                    Duration="0:0:1"></DoubleAnimation>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn2"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding ElementName=btn2,Path=ActualWidth}"
+                                    To="180"
+                                    Duration="0:0:1"></DoubleAnimation>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn3"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding ElementName=btn3,Path=ActualHeight}"
+                                    To="180"
+                                    Duration="0:0:1"></DoubleAnimation>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn3"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding ElementName=btn3,Path=ActualWidth}"
+                                    To="580"
+                                    Duration="0:0:1"></DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn1"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding ElementName=btn1,Path=ActualHeight}"
+                                    To="50"
+                                    Duration="0:0:1"></DoubleAnimation>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn1"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding ElementName=btn1,Path=ActualWidth}"
+                                    To="50"
+                                    Duration="0:0:1"></DoubleAnimation>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn2"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding ElementName=btn2,Path=ActualHeight}"
+                                    To="50"
+                                    Duration="0:0:1"></DoubleAnimation>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn2"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding ElementName=btn2,Path=ActualWidth}"
+                                    To="50"
+                                    Duration="0:0:1"></DoubleAnimation>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn3"
+                                    Storyboard.TargetProperty="Height"
+                                    From="{Binding ElementName=btn3,Path=ActualHeight}"
+                                    To="50"
+                                    Duration="0:0:1"></DoubleAnimation>
+                            <DoubleAnimation
+                                    Storyboard.TargetName="btn3"
+                                    Storyboard.TargetProperty="Width"
+                                    From="{Binding ElementName=btn3,Path=ActualWidth}"
+                                    To="50"
+                                    Duration="0:0:1"></DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button Grid.Row="2" Height="50" Width="50" Name="btn3" Background="DarkRed"></Button>
+        
+        
+    </Grid>
+</Window>
